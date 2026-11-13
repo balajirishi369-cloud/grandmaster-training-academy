@@ -1,23 +1,21 @@
 # Personal Grandmaster Training Academy
 
-## Run it
+## Open the site
 
-Double-click `Open in Chrome.bat` to open `index.html` in Chrome. You can also open the HTML file directly. For installable PWA support and service-worker caching, serve this folder over HTTPS (or localhost), then use the browser's **Install app** option. No build step is required. A GitHub Pages workflow is included under `.github/workflows/pages.yml`; it expects these files at the repository root and the `main` branch to be the publishing source.
+[Launch the academy](https://balajirishi369-cloud.github.io/grandmaster-training-academy/). It is hosted on GitHub Pages and works in current desktop and Android browsers.
 
-## Included in this delivery
+To open the source locally, open `index.html` in a browser. Offline app installation and service-worker caching require serving the files over HTTPS or localhost.
 
-- Responsive training workspace with a 64-square interactive chessboard.
-- Mouse drag, touch tap-to-select/tap-to-move, legal move filtering, check indication, castling, en passant, promotion, board rotation, undo/redo, FEN import/export, and basic PGN import/export.
-- A two-step Italian Game starter lesson: 1. e4, then 2. Nf3, followed by 3. Bc4. The coach supplies 1...e5 and 2...Nc6.
-- 20-minute countdown, session report, same-day resume, and local browser persistence.
-- Installable web-app manifest and service worker for offline caching.
+## Included in this starter
 
-## Scope still requiring source material or integration
+- Responsive workspace with an interactive 64-square chessboard.
+- Mouse drag and touch tap-to-move, legal-move filtering, common special moves, board rotation, undo/redo, and FEN/PGN tools.
+- A guided Italian Game starter lesson.
+- A 20-minute countdown, session report, same-day resume, and browser-local progress storage.
+- Web-app manifest and service worker.
 
-This is a working starter application, not the complete specification. The licensed Lichess puzzle archive is available under CC0, but it has not been imported or validated for this app, so no puzzle positions have been fabricated and no tactics curriculum is claimed. Stockfish is not integrated; engine evaluations are not displayed or simulated. The advanced calculation, tactical, endgame, visualization, mixed challenge, analysis-tree, and long-term progress curricula are not populated. Progress is stored in this browser's local storage; data export/backup is not implemented. The manifest has no app icon assets.
+## Current limits
 
-The board's move generator covers standard legal moves and common special moves, but has not been certified against a comprehensive chess rules test suite. Treat this delivery as a functional foundation pending the full acceptance suite from the specification.
+This is a functional starter, not the full training specification. It does not include a verified puzzle curriculum, Stockfish analysis, or populated calculation, tactical, endgame, visualization, mixed-challenge, or opening-preparation programs. Results stay in the current browser and are not synced. The move generator and performance have not completed the requested comprehensive chess-rules, 100-move, long-session, Android, or engine-interaction acceptance tests.
 
-## Data storage
-
-Session state is stored under `gta-state` in browser local storage. Clearing site data removes it. FEN can be copied from the FEN dialog as a simple position backup.
+The Lichess puzzle archive is available under CC0, but its positions have not been imported or validated for this site. Engine evaluations are not displayed or simulated.
